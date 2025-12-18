@@ -32,14 +32,35 @@
 
   <h3>1.3 Face data (images containing faces)</h3>
   <p>
-    The App may process images that contain a face to apply visual effects (filters, alignment, transformations).
-    In this context, "face data" refers to the image content itself when it includes a face.
+    The App may process images that contain a face to apply visual effects (filters, enhancement, upscaling, colorization, alignment, artistic transformations).
   </p>
+  
+  <p><strong>What we collect:</strong></p>
   <ul>
-    <li>We do <strong>not</strong> use face data to identify a person.</li>
-    <li>We do <strong>not</strong> create or store biometric identifiers (such as face templates/embeddings) for identification or authentication purposes.</li>
-    <li>If face detection is used to apply an effect (e.g., face positioning), any derived data (such as face bounding boxes or landmarks) is used only during processing and is <strong>not stored separately</strong>.</li>
-    <li>Face data is <strong>never</strong> shared with third parties for advertising, marketing, or user profiling purposes.</li>
+    <li>Images uploaded by you that may contain faces. The "face data" is the image content itself.</li>
+    <li>We do <strong>not</strong> extract, create, or store separate biometric identifiers (such as face templates, embeddings, or faceprints).</li>
+  </ul>
+
+  <p><strong>How we use face data:</strong></p>
+  <ul>
+    <li>Solely to apply visual effects and AI transformations requested by you.</li>
+    <li>If face detection is used (e.g., for alignment or positioning), any derived data (bounding boxes, landmarks) is used only during real-time processing and is <strong>not stored</strong>.</li>
+    <li>We do <strong>not</strong> use face data to identify or authenticate any person.</li>
+    <li>We do <strong>not</strong> use face data for advertising, marketing, or user profiling.</li>
+  </ul>
+
+  <p><strong>Sharing:</strong></p>
+  <ul>
+    <li>Images containing faces are shared with our AI processing providers (Fal.ai, Replicate, ByteDance) solely to perform the requested transformations. See Section 3.3 for details.</li>
+    <li>Face data is <strong>never</strong> shared for advertising, marketing, or profiling purposes.</li>
+  </ul>
+
+  <p><strong>Storage and retention:</strong></p>
+  <ul>
+    <li>Uploaded images are stored temporarily in Supabase Storage using time-limited signed URLs.</li>
+    <li>Uploaded images are retained for <strong>up to 1 hour</strong>, then automatically deleted.</li>
+    <li>Generated results are retained for <strong>up to 24 hours</strong>, then automatically deleted.</li>
+    <li>We do not retain face data beyond these timeframes.</li>
   </ul>
 
   <h3>1.4 Purchase and subscription information</h3>
