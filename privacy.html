@@ -1,218 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MaybeReal – Privacy Policy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaybeReal - Privacy Policy</title>
+<style>
+  :root{
+    --ink:#1b1b1b;
+    --ink-soft:#54514c;
+    --rule:#ddd8cf;
+    --flag:#8a3c12;
+    --flag-bg:#fdf4ec;
+    --page:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--ink);
+    font-family:Charter,"Bitstream Charter","Iowan Old Style",Georgia,serif;
+    font-size:17px;
+    line-height:1.62;
+    -webkit-text-size-adjust:100%;
+  }
+  main{max-width:41rem;margin:0 auto;padding:3.5rem 1.4rem 6rem}
+  h1{font-size:2rem;line-height:1.2;margin:0 0 .3rem;font-weight:600;letter-spacing:-.01em}
+  h2{font-size:1.25rem;margin:3rem 0 .8rem;font-weight:600;line-height:1.3}
+  h3{font-size:1.02rem;margin:1.8rem 0 .5rem;font-weight:600}
+  p,li{color:var(--ink)}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.45rem}
+  a{color:var(--flag);text-decoration:underline;text-underline-offset:2px}
+  a:focus-visible{outline:2px solid var(--flag);outline-offset:3px}
+  .meta{color:var(--ink-soft);font-size:.92rem;margin:0 0 2.2rem}
+  .meta span{display:block}
+  .flag{
+    border-left:3px solid var(--flag);
+    background:var(--flag-bg);
+    padding:1rem 1.2rem .1rem;
+    margin:1.4rem 0;
+  }
+  .flag p{font-size:.96rem}
+  .todo{
+    border:1px dashed var(--flag);
+    background:var(--flag-bg);
+    color:var(--flag);
+    padding:1rem 1.2rem .1rem;
+    margin:1.4rem 0;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:.83rem;
+    line-height:1.55;
+  }
+  table{border-collapse:collapse;width:100%;margin:1rem 0 1.4rem;font-size:.94rem}
+  th,td{border:1px solid var(--rule);padding:.55rem .7rem;text-align:left;vertical-align:top}
+  th{background:#fbfaf8;font-weight:600}
+  footer{margin-top:4rem;padding-top:1.4rem;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.9rem}
+  @media (max-width:600px){
+    body{font-size:16px}
+    main{padding:2.4rem 1.15rem 4rem}
+    h1{font-size:1.6rem}
+  }
+</style>
 </head>
+<body>
+<main>
 
-<body style="max-width: 860px; margin: 0 auto; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; padding: 20px;">
-  <h1>MaybeReal – Privacy Policy</h1>
-  <p><strong>Last updated:</strong> 2025-12-25</p>
+<h1>MaybeReal - Privacy Policy</h1>
+<p class="meta">
+  <span>Version 2.0</span>
+  <span>Last updated: 14 September 2026</span>
+</p>
 
-  <p>
-    This Privacy Policy explains how 3DATA ("we", "us", "our") collects, uses, and protects your information when you use the
-    MaybeReal mobile application (the "App").
-  </p>
+<h2>1. Who is responsible for your data</h2>
 
-  <h2>1. Information we collect</h2>
+<p>MaybeReal (the "App") is operated by Cerebri Virtual Corporation, a French
+<em>société par actions simplifiée</em> registered under number 100 370 469, RCS Paris, with its
+registered office at 60 rue François 1er, 75008 Paris, France ("we", "us", "our"). We are the
+controller of the personal data described in this policy.</p>
 
-  <h3>1.1 Account and authentication information</h3>
-  <ul>
-    <li>Email address and/or authentication identifiers (for login and account management).</li>
-    <li>Basic profile information if you sign in with a third-party provider (e.g., Apple, Google), as allowed by that provider.</li>
-  </ul>
+<p>For any question about this policy or to exercise your rights, contact
+<a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a>.</p>
 
-  <h3>1.2 Content you upload and generated content</h3>
-  <ul>
-    <li>Images and other media that you upload to use the App's features (enhancement, upscaling, filters, colorization, etc.).</li>
-    <li>Generated outputs produced by the App (processed images, thumbnails/previews).</li>
-    <li>Technical processing metadata needed to run the service (e.g., request identifiers, processing status, timestamps).</li>
-  </ul>
+<p>We have not appointed a Data Protection Officer. The address above reaches the people responsible
+for data protection at Cerebri Virtual Corporation.</p>
 
-  <h3>1.3 Face data (images containing faces)</h3>
-  <p>
-    The App may process images that contain a face to apply visual effects (filters, enhancement, upscaling, colorization, alignment, artistic transformations).
-  </p>
-  
-  <p><strong>What we collect:</strong></p>
-  <ul>
-    <li>Images uploaded by you that may contain faces. The "face data" is the image content itself.</li>
-    <li>We do <strong>not</strong> extract, create, or store separate biometric identifiers (such as face templates, embeddings, or faceprints).</li>
-  </ul>
+<p>This policy forms part of your agreement with us, alongside our
+<a href="https://maybereal-app.github.io/legal/terms.html">Terms of Use</a>.</p>
 
-  <p><strong>How we use face data:</strong></p>
-  <ul>
-    <li>Solely to apply visual effects and AI transformations requested by you.</li>
-    <li>If face detection is used (e.g., for alignment or positioning), any derived data (bounding boxes, landmarks) is used only during real-time processing and is <strong>not stored</strong>.</li>
-    <li>We do <strong>not</strong> use face data to identify or authenticate any person.</li>
-    <li>We do <strong>not</strong> use face data for advertising, marketing, or user profiling.</li>
-  </ul>
+<h2>2. What the App does with your content</h2>
 
-  <p><strong>Sharing:</strong></p>
-  <ul>
-    <li>Images containing faces are shared with our AI processing providers solely to perform the requested transformations. See Section 3.3 for details.</li>
-    <li>Face data is <strong>never</strong> shared for advertising, marketing, or profiling purposes.</li>
-  </ul>
+<p>MaybeReal lets you upload photos and videos, and generate new ones, using AI models: prank and
+humorous scenes, character and style transformations, animals and objects added to your photos,
+cinematic scenes, talking avatars, photo enhancement, restoration and colourisation, and video
+generated from a text prompt or from a reference image.</p>
 
-  <p><strong>Storage and retention:</strong></p>
-  <ul>
-    <li>Uploaded images are stored temporarily in Supabase Storage using time-limited signed URLs.</li>
-    <li>Uploaded images are retained for <strong>up to 1 hour</strong>, then automatically deleted.</li>
-    <li>Generated results are retained for <strong>up to 24 hours</strong>, then automatically deleted.</li>
-    <li>We do not retain face data beyond these timeframes.</li>
-  </ul>
+<p>To produce a result, your uploaded content is sent to external AI providers, processed, and
+returned to you. That is the core of the service, and it is why the sections below on sharing and on
+international transfers matter more here than in most apps.</p>
 
-  <h3>1.4 Purchase and subscription information</h3>
-  <ul>
-    <li>We use RevenueCat to manage in-app purchases and subscriptions.</li>
-    <li>RevenueCat receives a unique anonymous user identifier to track your subscription status.</li>
-    <li>We do <strong>not</strong> receive or store your full payment card details. Payments are processed by Apple (App Store) or Google (Play Store).</li>
-  </ul>
+<h2>3. What we collect</h2>
 
-  <h3>1.5 Usage and device data</h3>
-  <ul>
-    <li>Technical information: device model, operating system version, app version, approximate timestamps of use.</li>
-    <li>Non-identifying information about how you use the App (e.g., which features are triggered).</li>
-  </ul>
+<h3>3.1 Account data</h3>
 
-  <h2>2. How we use your information</h2>
-  <p>We use the information we collect to:</p>
-  <ul>
-    <li>Provide and operate the App's core features (image enhancement, upscaling, colorization, filters, etc.).</li>
-    <li>Authenticate you and secure your account.</li>
-    <li>Store content temporarily so you can retrieve your results.</li>
-    <li>Manage your subscriptions and in-app purchases.</li>
-    <li>Monitor performance and improve the App.</li>
-    <li>Prevent abuse, spam, fraud, and misuse of the service.</li>
-    <li>Comply with legal obligations and enforce our terms (where applicable).</li>
-  </ul>
+<ul>
+  <li>Email address and authentication identifiers, to create and secure your account.</li>
+  <li>Basic profile information if you sign in through Apple or Google, limited to what that provider
+      releases.</li>
+</ul>
 
-  <h2>3. Third-party services</h2>
-  <p>We rely on third-party providers to operate the App. Below is a comprehensive list:</p>
+<h3>3.2 Content you upload and content the App generates</h3>
 
-  <h3>3.1 Supabase (backend, database, authentication, storage)</h3>
-  <p>
-    We use Supabase for backend services, database, authentication, and storage. Your account data and your uploaded
-    images and generated results may be stored and processed on Supabase infrastructure.
-  </p>
-  <p>
-    Uploaded images and generated results are stored in Supabase Storage and access is controlled using <strong>time-limited signed URLs</strong>.
-  </p>
-  <p><strong>Privacy Policy:</strong> <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></p>
+<ul>
+  <li>Photos, videos and other media you upload.</li>
+  <li>Text prompts you write.</li>
+  <li>Outputs generated for you, including previews and thumbnails.</li>
+  <li>Technical processing metadata: request identifiers, processing status, timestamps, model used.</li>
+</ul>
 
-  <h3>3.2 Google Cloud Run (infrastructure)</h3>
-  <p>
-    We use Google Cloud Run to host backend processing services. Your images may be temporarily processed on Google Cloud infrastructure.
-  </p>
-  <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+<h3>3.3 Images and videos containing faces</h3>
 
-  <h3>3.3 AI service providers (image processing)</h3>
-  <p>
-    To generate the requested results (e.g., enhancement, upscaling, restoration, colorization, filters, and other AI transformations), we use external
-    AI service providers acting as data processors, including:
-  </p>
-  <ul>
-    <li><strong>Fal.ai</strong> – <a href="https://fal.ai/privacy" target="_blank">https://fal.ai/privacy</a></li>
-    <li><strong>Replicate</strong> – <a href="https://replicate.com/privacy" target="_blank">https://replicate.com/privacy</a></li>
-    <li><strong>ByteDance</strong> – <a href="https://seed.bytedance.com/en/privacy-policy" target="_blank">https://seed.bytedance.com/en/privacy-policy</a></li>
-  </ul>
-  <p>
-    For this purpose, your uploaded images (which may contain faces) are shared with these providers so they can process the content and
-    return the requested output. We share only what is necessary to perform the processing.
-  </p>
+<p>Most of what the App does involves faces, so this deserves its own section.</p>
 
-  <h3>AI Provider Use of Content</h3>
-  <p>
-    Uploaded content (including images that may contain faces) is processed by third-party artificial intelligence service providers in order to deliver the App’s functionality. In certain cases, these providers may also use such content for the training and improvement of their AI systems, in accordance with their respective privacy policies referenced in this document. This means that images you submit through the App may be retained and reused by those providers beyond the scope of your individual request.
-  </p>
-  <p>
-    By continuing to use the App, you agree that your uploaded content may be processed in this manner by our AI service providers. Please review their privacy policies for further details regarding such processing.
-  </p>
+<p><strong>What we handle.</strong> The images and videos you upload, which may contain your face or
+someone else's. The face data is the media itself. We do not extract, create or store separate
+biometric identifiers such as face templates, embeddings or faceprints, and we do not use face data
+to identify or authenticate anyone.</p>
 
-  <h3>3.4 RevenueCat (subscription and purchase management)</h3>
-  <p>
-    We use RevenueCat to manage in-app subscriptions and purchases. RevenueCat receives an anonymous user identifier and
-    information about your subscription status. RevenueCat does not receive your images or other content.
-  </p>
-  <p><strong>Privacy Policy:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></p>
+<p><strong>How it is used.</strong> Only to produce the transformation you asked for. Where face
+detection runs for alignment or framing, the derived data (bounding boxes, landmarks) exists only
+during processing and is not stored. Face data is never used for advertising, marketing or
+profiling.</p>
 
-  <h3>3.5 Apple / Google (platform services)</h3>
-  <p>
-    If you choose to sign in using Apple or Google, those providers process certain information under their own privacy policies.
-    Purchases and subscriptions made through the App Store or Play Store are processed by Apple or Google respectively. We do not receive your full payment card details.
-  </p>
+<p><strong>Faces of other people.</strong> If you upload media showing someone else, you are
+responsible for having their consent, as set out in section 5.3 of the Terms of Use. In several
+countries, including under the GDPR, processing another person's facial image can require their
+explicit consent. We process that media on your instruction.</p>
 
-  <h2>4. Legal bases (if you are in the EU/EEA)</h2>
-  <p>We process personal data under the following legal bases:</p>
-  <ul>
-    <li><strong>Contract</strong>: to provide the App and deliver requested features.</li>
-    <li><strong>Legitimate interests</strong>: to secure, maintain, and improve the service, prevent fraud, and troubleshoot issues.</li>
-    <li><strong>Consent</strong>: where required (e.g., access to photos/camera permissions depending on your device settings).</li>
-    <li><strong>Legal obligations</strong>: where we must comply with applicable laws.</li>
-  </ul>
+<p><strong>Retention on our systems.</strong> Uploaded media and generated results are stored in
+Supabase Storage behind time-limited signed URLs and deleted automatically after up to 48 hours.</p>
 
-  <h2>5. Data retention</h2>
-  <ul>
-    <li><strong>Account data</strong> is kept for as long as your account remains active. You may request deletion at any time.</li>
-    <li><strong>Uploaded images</strong> are retained for <strong>up to 1 hour</strong> to allow our AI service providers to retrieve and process them, then automatically deleted.</li>
-    <li><strong>Generated results</strong> are retained for <strong>up to 24 hours</strong> so you can view and download them, then automatically deleted.</li>
-    <li><strong>Subscription data</strong> is retained by RevenueCat as long as necessary to manage your subscription.</li>
-    <li><strong>Logs and technical data</strong> are kept only as long as necessary for troubleshooting, security, and improving the service (typically no more than 90 days).</li>
-  </ul>
+<p><strong>Retention by our AI providers.</strong> A file deleted from our systems is not
+automatically deleted by the provider that processed it. We set the media held by fal.ai to expire
+after 48 hours, in line with our own retention. Technical records of requests, and the retention
+applied by our other AI providers, follow their own rules. Section 6.2 gives the detail.</p>
 
-  <h2>6. Data security</h2>
-  <p>
-    We implement reasonable administrative, technical, and organizational measures designed to protect your information, including:
-  </p>
-  <ul>
-    <li>Restricted access controls to backend systems and storage.</li>
-    <li>Use of <strong>signed, time-limited URLs</strong> for temporary access to uploaded images and results.</li>
-    <li>Encryption in transit (HTTPS/TLS) for all communications.</li>
-    <li>Regular review of our security practices.</li>
-  </ul>
-  <p>
-    No method of transmission or storage is 100% secure. We cannot guarantee absolute security, but we work to protect your data.
-  </p>
+<h3>3.4 Purchases and subscriptions</h3>
 
-  <h2>7. Your rights</h2>
-  <p>
-    Depending on your location, you may have rights regarding your personal data, including:
-  </p>
-  <ul>
-    <li><strong>Access</strong>: request a copy of your data.</li>
-    <li><strong>Correction</strong>: request correction of inaccurate data.</li>
-    <li><strong>Deletion</strong>: request deletion of your data and account.</li>
-    <li><strong>Portability</strong>: request your data in a portable format.</li>
-    <li><strong>Objection</strong>: object to certain processing of your data.</li>
-    <li><strong>Withdraw consent</strong>: where processing is based on consent.</li>
-  </ul>
-  <p>
-    To exercise your rights, contact us using the email address in the Contact section below.
-  </p>
+<ul>
+  <li>We use RevenueCat to manage subscriptions and in-app purchases. It receives an anonymous user
+      identifier and your subscription status, never your content.</li>
+  <li>Payments are processed by Apple or Google. We never receive or store your card details.</li>
+  <li>We keep records of transactions where accounting and tax law requires it.</li>
+</ul>
 
-  <h2>8. Children</h2>
-  <p>
-    The App is not intended for children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal
-    data from children. If you believe a child has provided us with personal data, contact us and we will take appropriate steps to delete that information.
-  </p>
+<h3>3.5 Usage and device data</h3>
 
-  <h2>9. International transfers</h2>
-  <p>
-    Your information may be processed in countries other than your own, including the United States and other countries outside the European Union, especially when using
-    third-party service providers. Where required by law, we rely on appropriate safeguards for such transfers, including standard contractual clauses where applicable.
-  </p>
+<ul>
+  <li>Device model, operating system version, app version, language, approximate timestamps.</li>
+  <li>Which features you use, how often, and whether generations succeed or fail.</li>
+  <li>Crash and performance diagnostics.</li>
+</ul>
 
-  <h2>10. Changes to this Privacy Policy</h2>
-  <p>
-    We may update this Privacy Policy from time to time. We will revise the "Last updated" date above. Material changes will be communicated through the App or by other means. Your continued use of the App
-    after an update means you accept the updated Privacy Policy.
-  </p>
+<h3>3.6 Advertising and measurement</h3>
 
-  <h2>11. Contact</h2>
-  <p>
-    If you have any questions about this Privacy Policy, want to exercise your rights, or have concerns about how we handle your data, contact us at:
-    <a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a>.
-  </p>
+<p>We advertise MaybeReal on third-party platforms and measure which campaigns bring new users. The
+App integrates the Meta (Facebook) software development kit, which can collect advertising
+identifiers and app events such as installs and sessions, and share them with Meta Platforms.</p>
+
+<p>On iOS, this tracking only happens if you allow it when the App shows the App Tracking Transparency
+prompt. In the EEA and the UK, we rely on your consent for advertising and measurement, and you can
+withdraw it at any time in your device settings or in the App.</p>
+
+<h2>4. Why we process it, and on what legal basis</h2>
+
+<table>
+  <thead>
+    <tr><th>Purpose</th><th>Legal basis</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Creating your account, running the App, producing the results you request</td><td>Performance of the contract</td></tr>
+    <tr><td>Processing images and videos containing faces to apply the effect you chose</td><td>Performance of the contract, and your explicit consent where local law treats facial images as biometric data</td></tr>
+    <tr><td>Managing subscriptions, purchases and credits</td><td>Performance of the contract</td></tr>
+    <tr><td>Keeping the service secure, preventing fraud, abuse and credit-system manipulation</td><td>Our legitimate interest in protecting the service</td></tr>
+    <tr><td>Moderating content to block illegal material</td><td>Legal obligation, and our legitimate interest</td></tr>
+    <tr><td>Diagnostics, stability and improving the App</td><td>Our legitimate interest</td></tr>
+    <tr><td>Advertising, attribution and measurement</td><td>Your consent</td></tr>
+    <tr><td>Accounting, tax and responding to legal claims</td><td>Legal obligation, and our legitimate interest</td></tr>
+  </tbody>
+</table>
+
+<h2>5. Content moderation</h2>
+
+<p>Uploads and generated outputs are screened by automated systems, including the moderation
+provider named in section 6.3, to detect illegal content, particularly material sexualising minors,
+and other content prohibited by our Terms of Use. A
+detection may block a generation, and repeated or serious detections may lead to suspension or
+closure of your account.</p>
+
+<p>Where such a decision is made automatically and significantly affects you, you may ask for human
+review, express your point of view and contest the decision, by writing to the address in section 1.</p>
+
+<h2>6. Who we share it with</h2>
+
+<p>We do not sell your personal data. We share it only with the providers below, who act on our
+instructions.</p>
+
+<h3>6.1 Infrastructure</h3>
+
+<ul>
+  <li><strong>Supabase</strong> (database, authentication, storage) -
+      <a href="https://supabase.com/privacy">privacy policy</a></li>
+  <li><strong>Google Cloud Run</strong> (backend hosting and processing) -
+      <a href="https://policies.google.com/privacy">privacy policy</a></li>
+</ul>
+
+<h3>6.2 AI processing providers</h3>
+
+<p>Your uploaded media and prompts are sent to these providers so they can generate the output you
+requested, and only for that purpose:</p>
+
+<ul>
+  <li><strong>fal.ai</strong> - <a href="https://fal.ai/privacy">privacy policy</a></li>
+  <li><strong>OpenAI</strong> - <a href="https://privacy.openai.com/policies">privacy policy</a></li>
+</ul>
+
+<p>These providers process your content on our instructions, to produce the result you asked for.
+Content submitted to OpenAI through its API is not used to train its models. For fal.ai, our
+agreement governs what may be done with the content we send, and fal reserves rights over anonymised
+and aggregated data derived from the use of its service.</p>
+
+<p><strong>How long they keep it.</strong> Each provider applies its own retention. We set the
+media held by fal.ai to expire after 48 hours, matching our own retention. Until it expires, a
+generated or uploaded file on their content delivery network is reachable by anyone holding its URL.
+Technical records of requests, and the retention applied by OpenAI, follow their own rules. Ask us using the address in section 1 if you want the current position for a
+specific provider.</p>
+
+<h3>6.3 Content moderation provider</h3>
+
+<ul>
+  <li><strong>Sightengine</strong> (Kozelo SAS, Paris, France) -
+      <a href="https://sightengine.com/policies/privacy">privacy policy</a>. Uploaded and generated
+      media is sent to Sightengine to detect illegal and prohibited content, as described in
+      section 5.</li>
+</ul>
+
+<h3>6.4 Subscriptions and platforms</h3>
+
+<ul>
+  <li><strong>RevenueCat</strong> (subscription management) -
+      <a href="https://www.revenuecat.com/privacy">privacy policy</a></li>
+  <li><strong>Apple</strong>, for sign-in, payments and subscriptions on the App Store -
+      <a href="https://www.apple.com/legal/privacy/data/en/app-store/">App Store and privacy</a></li>
+  <li><strong>Google</strong>, for sign-in, payments and subscriptions on Google Play -
+      <a href="https://policies.google.com/privacy">privacy policy</a></li>
+</ul>
+
+<h3>6.5 Others</h3>
+
+<p>We may disclose data where the law requires it, to respond to a valid request from an authority,
+or to establish, exercise or defend legal claims.</p>
+
+<h2>7. International transfers</h2>
+
+<p>Several of the providers above operate outside the European Economic Area, including in the United
+States. Where we transfer personal data outside the EEA, we rely on the European Commission's standard
+contractual clauses, or on an adequacy decision where one covers the provider. You can ask us for
+details of the safeguards in place using the contact address in section 1.</p>
+
+<h2>8. How long we keep it</h2>
+
+<table>
+  <thead>
+    <tr><th>Data</th><th>Retention</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Account data</td><td>While your account is active, then deleted on request or after a prolonged period of inactivity</td></tr>
+    <tr><td>Uploaded media and generated results, on our systems</td><td>Up to 48 hours, then deleted automatically</td></tr>
+    <tr><td>Media held by fal.ai</td><td>48 hours, set by us on each request</td></tr>
+    <tr><td>Request records and media held by our other AI providers</td><td>Under each provider's own rules. See section 6.2</td></tr>
+    <tr><td>Subscription and purchase records</td><td>As long as needed to manage the subscription, and as required by accounting and tax law</td></tr>
+    <tr><td>Logs and technical data</td><td>Normally no more than 90 days</td></tr>
+    <tr><td>Moderation records of blocked content</td><td>As long as needed to enforce our Terms and meet legal obligations</td></tr>
+  </tbody>
+</table>
+
+<h2>9. Security</h2>
+
+<p>We use access controls on backend systems and storage, signed and time-limited URLs for temporary
+access to media, encryption in transit, and regular review of our practices. No system is completely
+secure, and we cannot guarantee absolute security, but we work to protect your data and will notify
+you and the competent authority where the law requires it after a breach.</p>
+
+<h2>10. Your rights</h2>
+
+<p>Depending on where you live, you can ask us to give you access to your data, correct it, delete it,
+export it in a portable format, restrict how we use it, or object to processing based on our
+legitimate interests. Where processing is based on your consent, you can withdraw that consent at any
+time, without affecting what we did before.</p>
+
+<p>Write to <a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a>. We answer within one
+month, and will tell you if we need longer.</p>
+
+<p>You can delete your account from within the App. Deleting your account does not cancel a
+subscription: cancel that through Apple or Google, as explained in section 9.4 of the Terms of Use.</p>
+
+<p><strong>Complaints.</strong> If you think we have handled your data wrongly, you can lodge a
+complaint with a supervisory authority. In France that is the CNIL, 3 place de Fontenoy, TSA 80715,
+75334 Paris CEDEX 07, <a href="https://www.cnil.fr">cnil.fr</a>. If you live elsewhere in the EEA or
+the UK, you can complain to the authority in your own country.</p>
+
+<h2>11. Children</h2>
+
+<p>The App is not intended for children under 13, or under the higher age required in your country.
+Section 3 of the Terms of Use explains the age requirement in full. We do not knowingly collect
+personal data from a child below that age. If you believe a child has given us personal data, contact
+us and we will delete it.</p>
+
+<h2>12. Changes to this policy</h2>
+
+<p>We may update this policy. We will change the date at the top, and where a change is material we
+will tell you in the App or by email before it takes effect.</p>
+
+<h2>13. Contact</h2>
+
+<p>Cerebri Virtual Corporation, 60 rue François 1er, 75008 Paris, France<br>
+<a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a></p>
+
+<footer>
+  <p>MaybeReal is published by Cerebri Virtual Corporation. Version 2.0, 14 September 2026.</p>
+</footer>
+
+</main>
 </body>
 </html>
