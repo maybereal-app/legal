@@ -1,178 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MaybeReal – Terms of Use</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaybeReal - Terms of Use</title>
+<style>
+  :root{
+    --ink:#1b1b1b;
+    --ink-soft:#54514c;
+    --rule:#ddd8cf;
+    --flag:#8a3c12;
+    --flag-bg:#fdf4ec;
+    --page:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--ink);
+    font-family:Charter,"Bitstream Charter","Iowan Old Style",Georgia,serif;
+    font-size:17px;
+    line-height:1.62;
+    -webkit-text-size-adjust:100%;
+  }
+  main{max-width:41rem;margin:0 auto;padding:3.5rem 1.4rem 6rem}
+  h1{font-size:2rem;line-height:1.2;margin:0 0 .3rem;font-weight:600;letter-spacing:-.01em}
+  h2{font-size:1.25rem;margin:3rem 0 .8rem;font-weight:600;line-height:1.3}
+  h3{font-size:1.02rem;margin:1.8rem 0 .5rem;font-weight:600}
+  p,li{color:var(--ink)}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.45rem}
+  a{color:var(--flag);text-decoration:underline;text-underline-offset:2px}
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--flag);outline-offset:3px}
+  .meta{color:var(--ink-soft);font-size:.92rem;margin:0 0 2.2rem}
+  .meta span{display:block}
+  hr{border:0;border-top:1px solid var(--rule);margin:3rem 0}
+  .flag{
+    border-left:3px solid var(--flag);
+    background:var(--flag-bg);
+    padding:1rem 1.2rem .1rem;
+    margin:1.4rem 0;
+  }
+  .flag p{font-size:.96rem}
+  .todo{
+    border:1px dashed var(--flag);
+    background:var(--flag-bg);
+    color:var(--flag);
+    padding:1rem 1.2rem .1rem;
+    margin:1.4rem 0;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:.83rem;
+    line-height:1.55;
+  }
+  table{border-collapse:collapse;width:100%;margin:1rem 0 1.4rem;font-size:.94rem}
+  th,td{border:1px solid var(--rule);padding:.55rem .7rem;text-align:left;vertical-align:top}
+  th{background:#fbfaf8;font-weight:600}
+  .form{border:1px solid var(--rule);padding:1.2rem 1.3rem .3rem;margin:1.2rem 0;font-size:.94rem}
+  footer{margin-top:4rem;padding-top:1.4rem;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.9rem}
+  @media (max-width:600px){
+    body{font-size:16px}
+    main{padding:2.4rem 1.15rem 4rem}
+    h1{font-size:1.6rem}
+  }
+</style>
 </head>
-<body style="max-width: 800px; margin: 0 auto; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; padding: 20px;">
-  <h1>MaybeReal – Terms of Use</h1>
-  <p>Last updated: 2025-12-18</p>
+<body>
+<main>
 
-  <p>
-    These Terms of Use ("Terms") govern your use of the MaybeReal mobile application (the "App"), provided by 3DATA
-    ("we", "us", "our"). By downloading, accessing, or using the App, you agree to be bound by these Terms.
-    If you do not agree, do not use the App.
-  </p>
+<h1>MaybeReal - Terms of Use</h1>
+<p class="meta">
+  <span>Version 2.0</span>
+  <span>Last updated: 14 September 2026</span>
+</p>
 
-  <h2>1. Service description</h2>
-  <p>
-    MaybeReal allows you to upload images and apply AI-powered transformations such as enhancement, upscaling, colorization,
-    restoration, and various filters or effects. The exact features may change over time.
-  </p>
+<h2>1. Who we are</h2>
 
-  <h2>2. Eligibility</h2>
-  <p>
-    You must be at least 13 years old (or the minimum age required in your country) to use the App. By using the App, you
-    represent that you meet this requirement and that you have the legal capacity to agree to these Terms.
-  </p>
+<p>The MaybeReal mobile application (the "App") is published and operated by Cerebri Virtual
+Corporation, a French <em>société par actions simplifiée</em> ("we", "us", "our").</p>
 
-  <h2>3. Account and security</h2>
-  <ul>
-    <li>You are responsible for maintaining the confidentiality of your login credentials.</li>
-    <li>You are responsible for all activities that occur under your account.</li>
-    <li>
-      You must notify us immediately if you suspect any unauthorized access or use of your account
-      at <a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a>.
-    </li>
-  </ul>
+<ul>
+  <li>Registered office: 60 rue François 1er, 75008 Paris, France</li>
+  <li>Registered in France under number 100 370 469, RCS Paris (EUID FR7501.100370469)</li>
+  <li>Intra-EU VAT number: FR42100370469</li>
+  <li>Contact: <a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a></li>
+</ul>
 
-  <h2>4. Your content and license</h2>
-  <h3>4.1 Your content</h3>
-  <p>"Content" means the images and any other material you upload or generate in the App.</p>
-  <ul>
-    <li>You remain the owner of your Content.</li>
-    <li>You are solely responsible for your Content and for ensuring you have all necessary rights to use it in the App.</li>
-  </ul>
+<p>These Terms of Use (the "Terms") govern your access to and use of the App. By downloading,
+accessing or using the App, you agree to be bound by them. If you do not agree, do not use the App.</p>
 
-  <h3>4.2 License you grant to us</h3>
-  <p>
-    By uploading Content to the App, you grant us a limited, worldwide, non-exclusive, royalty-free license to:
-  </p>
-  <ul>
-    <li>Host, store, process, and display your Content as necessary to provide the App's features to you.</li>
-    <li>Send your Content to external AI service providers in order to generate the requested outputs.</li>
-  </ul>
-  <p>
-    We do not claim ownership of your Content and we do not use your Content for our own marketing without your explicit consent.
-  </p>
+<h2>2. What the App does</h2>
 
-  <h2>5. Acceptable use</h2>
-  <p>You agree not to use the App to:</p>
-  <ul>
-    <li>Upload any Content that is illegal, harmful, abusive, harassing, defamatory, or hateful.</li>
-    <li>Upload Content that violates the rights of others (including intellectual property rights, privacy, or publicity rights).</li>
-    <li>Create or distribute sexually explicit content involving minors or any other illegal content.</li>
-    <li>Reverse engineer, decompile, or attempt to extract the source code of the App.</li>
-    <li>Attempt to bypass security measures or abuse the service (e.g. automated scraping, spam, or excessive load).</li>
-  </ul>
-  <p>We may suspend or terminate your access if you violate these rules.</p>
+<p>MaybeReal lets you upload photos and videos and apply AI-powered transformations, including
+character and style transformations, filters, effects and humorous or "prank" style edits, and lets
+you generate images and short videos from prompts.</p>
 
-  <h2>6. Subscriptions and In-App Purchases</h2>
+<p>Outputs are produced by automated systems. They are synthetic. They may be inaccurate,
+unexpected, unflattering, or different from what you asked for. Available features, models and
+processing times may change, and we may add, modify or discontinue features at any time. Where a
+change materially reduces what a paid plan offers, section 17 applies.</p>
 
-  <h3>6.1 Auto-Renewable Subscriptions</h3>
-  <p>The App offers the following auto-renewable weekly subscription options:</p>
-  <ul>
-    <li><strong>MaybeReal Pro</strong> – 3,000 credits per week, renews automatically every 7 days. Includes a 3-day free trial with 300 credits for new subscribers.</li>
-    <li><strong>MaybeReal Advanced</strong> – 7,000 credits per week, renews automatically every 7 days</li>
-    <li><strong>MaybeReal Unlimited</strong> – Unlimited usage per week (up to 100,000 credits), renews automatically every 7 days</li>
-  </ul>
-  <p>Subscription prices are displayed in the App before purchase and may vary by region.</p>
-  <p>
-    Subscription credits are granted for the current billing period only. At each renewal, your subscription
-    credit balance is <strong>reset to the plan's weekly amount</strong>: subscription credits are
-    <strong>not cumulative and do not carry over</strong> from one period to the next, regardless of how many
-    you had left. Any unused subscription credits are forfeited at renewal.
-  </p>
+<h2>3. Eligibility</h2>
 
-  <h3>6.2 Payment and Billing</h3>
-  <ul>
-    <li>Payment will be charged to your Apple ID account at confirmation of purchase.</li>
-    <li>Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period.</li>
-    <li>Your account will be charged for renewal within 24 hours prior to the end of the current period at the cost of the chosen subscription.</li>
-    <li>Subscription credits are not cumulative or transferable between billing periods. Unused subscription credits do not roll over and are reset at each renewal.</li>
-    <li>This non-rollover rule applies only to subscription credits. Credits obtained from one-time credit packs or from in-app rewards are separate, do not expire, and are not reset at renewal (see Section 6.5).</li>
-  </ul>
+<p>You must be at least 13 years old to use the App, which is rated 13+ on the App Store and
+for a comparable audience on Google Play.</p>
 
-  <h3>6.3 Managing and Canceling Subscriptions</h3>
-  <ul>
-    <li>You can manage or cancel your subscription at any time by going to your device's Settings → [Your Name] → Subscriptions.</li>
-    <li>Cancellation takes effect at the end of the current billing period. You will retain access to premium features until then.</li>
-    <li>No refunds will be provided for the unused portion of any subscription period.</li>
-  </ul>
+<p>Some countries set a higher age, either for entering into a contract of this kind or for an
+online service to process a young person's personal data without a parent being involved. Across the
+European Union that age ranges from 13 to 16. Where the law that applies to you sets an age above 13,
+you must have reached it, or your parent or legal guardian must consent on your behalf and accept
+these Terms with you.</p>
 
-  <h3>6.4 Free Trials</h3>
-  <p>
-    MaybeReal Pro includes a <strong>3-day free trial</strong> with 300 credits for new subscribers.
-  </p>
-  <ul>
-    <li>The free trial automatically converts to a paid weekly subscription at the end of the 3-day trial period unless you cancel at least 24 hours before the trial ends.</li>
-    <li>Any unused portion of a free trial will be forfeited when you purchase a subscription.</li>
-    <li>Free trials are available only once per Apple ID.</li>
-    <li>You can cancel at any time during the trial by going to Settings → [Your Name] → Subscriptions.</li>
-  </ul>
+<p>By using the App you confirm that you meet these requirements. If we become aware that a user
+does not, we may suspend or close the account.</p>
 
-  <h3>6.5 Credit Packs (One-Time Purchases)</h3>
-  <p>The App offers the following one-time credit packs:</p>
-  <ul>
-    <li><strong>5,000 Credits Pack</strong></li>
-    <li><strong>15,000 Credits Pack</strong></li>
-    <li><strong>50,000 Credits Pack</strong></li>
-  </ul>
-  <p>
-    Credit packs are consumable, non-refundable purchases. Credits do not expire but cannot be transferred or refunded.
-    Prices are displayed in the App before purchase and may vary by region.
-  </p>
+<h2>4. Account and security</h2>
 
-  <h2>7. Third-party services</h2>
-  <p>
-    The App uses third-party services such as Supabase (backend, database, storage), RevenueCat (subscription management), 
-    and external AI service providers (Fal.ai, Replicate, ByteDance) for image processing. Your use of the App may therefore 
-    be subject to their terms and policies as well.
-  </p>
+<ul>
+  <li>You are responsible for keeping your credentials confidential.</li>
+  <li>You are responsible for activity carried out under your account.</li>
+  <li>Tell us immediately at <a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a> if you suspect unauthorised access.</li>
+  <li>One person, one account. Accounts may not be sold, shared or transferred.</li>
+</ul>
 
-  <h2>8. Intellectual property</h2>
-  <p>
-    The App, including its design, interface, features, and underlying software, is owned by 3DATA or its licensors.
-    You are granted a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial
-    purposes, in accordance with these Terms.
-  </p>
+<h2>5. Your content</h2>
 
-  <h2>9. Disclaimer of warranties</h2>
-  <p>
-    The App is provided on an "as is" and "as available" basis. We do not guarantee that the App will be error-free, uninterrupted,
-    or that it will meet all of your expectations. To the fullest extent permitted by law, we disclaim all warranties, express or
-    implied, including any implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
-  </p>
+<h3>5.1 Ownership</h3>
 
-  <h2>10. Limitation of liability</h2>
-  <p>
-    To the maximum extent permitted by law, 3DATA will not be liable for any indirect, incidental, special, consequential,
-    or punitive damages, or any loss of data, profits, or revenues, arising out of or related to your use of the App.
-  </p>
+<p>"Content" means the images, videos, prompts and other material you upload to or generate in the
+App. You remain the owner of your Content, subject to the rights of any third party appearing in it.</p>
 
-  <h2>11. Termination</h2>
-  <p>
-    We may suspend or terminate your access to the App at any time if we reasonably believe that you have violated these Terms or
-    that your use may cause harm to us, other users, or third parties. You may stop using the App and delete it from your device at
-    any time.
-  </p>
+<h3>5.2 Licence you grant us</h3>
 
-  <h2>12. Changes to the Terms</h2>
-  <p>
-    We may update these Terms from time to time. If we make material changes, we will notify you within the App or by other
-    reasonable means. Your continued use of the App after the changes become effective means you accept the new Terms.
-  </p>
+<p>You grant us a limited, worldwide, non-exclusive, royalty-free licence to host, store, process,
+transmit and display your Content strictly as necessary to operate the App and deliver the features
+you request, including sending it to the AI service providers listed in section 8. This licence ends
+when your Content is deleted, except for copies we must retain to comply with law or to handle a
+dispute, and except for copies held by third-party providers under their own retention rules.</p>
 
-  <h2>13. Governing law</h2>
-  <p>
-    These Terms are governed by the laws of France. Any disputes shall be resolved in the courts of France.
-  </p>
+<p>We do not claim ownership of your Content. We do not use your Content in our marketing without
+your separate, explicit and revocable consent.</p>
 
-  <h2>14. Contact</h2>
-  <p>
-    If you have any questions about these Terms, please contact us at
-    <a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a>.
-  </p>
+<h3>5.3 People appearing in your Content</h3>
+
+<p>This section matters more than any other in these Terms. You represent and warrant that, for
+every identifiable person appearing in Content you upload:</p>
+
+<ul>
+  <li>you hold all necessary rights, permissions and consents, including consent to have their image
+      altered, transformed or used to generate synthetic content;</li>
+  <li>where that person is a minor, you are their parent or legal guardian, or you hold the documented
+      consent of one;</li>
+  <li>you will obtain any additional consent required by the law applicable to you, in writing where
+      that law so requires.</li>
+</ul>
+
+<p>Uploading a photograph of another person may involve processing their personal data, and in some
+jurisdictions their biometric data. Where you upload Content depicting other people, you act as the
+controller of that processing and you are responsible for having a lawful basis for it. We process
+that Content on your instruction in order to deliver the feature you requested.</p>
+
+<h2>6. Acceptable use</h2>
+
+<p>You agree not to use the App to create, upload, store or distribute anything that:</p>
+
+<ul>
+  <li>is illegal, harmful, abusive, harassing, defamatory, hateful or discriminatory;</li>
+  <li>sexualises a minor in any way, or depicts a minor in a sexual, suggestive or degrading context.
+      We report such content to the competent authorities and permanently close the account;</li>
+  <li>is sexually explicit, or depicts nudity of a real identifiable person without their consent;</li>
+  <li>depicts a real identifiable person in a false, humiliating, defamatory or damaging situation,
+      or in a way likely to be taken as genuine to their detriment;</li>
+  <li>impersonates a real person in order to obtain money, credentials, personal data or an advantage;</li>
+  <li>fabricates statements, endorsements or conduct by public figures, candidates, officials or
+      institutions in a way capable of misleading the public;</li>
+  <li>depicts real violence, self-harm, or promotes any of them;</li>
+  <li>infringes the intellectual property, privacy, image or publicity rights of others.</li>
+</ul>
+
+<p>You also agree not to reverse engineer, decompile or extract the source code of the App, not to
+circumvent technical or security measures, not to scrape or automate access, not to resell or
+redistribute App outputs as a competing service, and not to manipulate the credit system, including
+by exploiting subscription changes, refunds, trial resets or multiple accounts.</p>
+
+<h3>6.1 Labelling synthetic content</h3>
+
+<p>Content generated by the App is artificially generated or manipulated. If you publish or share it,
+you must not present it as a genuine recording of real events or of a real person's words or conduct,
+and you must disclose its artificial nature where a reasonable viewer could otherwise be misled or
+where applicable law, including EU rules on the transparency of AI-generated content, requires that
+disclosure. Humour does not remove that obligation.</p>
+
+<p>We may apply visible or machine-readable markings to outputs. You must not remove, alter or
+obscure them.</p>
+
+<h3>6.2 Enforcement</h3>
+
+<p>We may remove Content, and suspend or terminate your access, where we reasonably believe these
+Terms have been breached. Where the breach is not serious and can be corrected, we will give you
+notice and an opportunity to correct it first. Section 16 explains what happens to credits.</p>
+
+<h2>7. Intellectual property</h2>
+
+<p>The App, its design, interface, features and underlying software belong to us or our licensors.
+You receive a limited, non-exclusive, non-transferable, revocable licence to use the App for your own
+personal, non-commercial purposes. Rights in outputs generated from your Content are dealt with in
+section 5.</p>
+
+<h2>8. Third-party services</h2>
+
+<p>The App relies on third-party providers for hosting, storage, subscription management and AI
+processing. Some of them operate outside the European Economic Area, and your Content is sent to AI
+providers in order to produce the outputs you request.</p>
+
+<p>The current list of those providers, together with the purposes, the transfer safeguards and the
+retention periods, is set out in our <a href="https://maybereal-app.github.io/legal/privacy.html">Privacy Policy</a>, which forms part of your
+agreement with us. Read it before uploading Content. Your use of the App may also be subject to those
+providers' own terms.</p>
+
+<h2>9. Subscriptions, credits and purchases</h2>
+
+<h3>9.1 Plans</h3>
+
+<p>The App offers the following auto-renewing subscriptions. Prices are shown in the App before
+purchase and vary by region.</p>
+
+<table>
+  <thead>
+    <tr><th>Plan</th><th>Credits</th><th>Credits granted</th><th>Renews</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>MaybeReal Pro</td><td>3,000</td><td>Every 7 days</td><td>Every 7 days</td></tr>
+    <tr><td>MaybeReal Pro Plus</td><td>7,000</td><td>Every 7 days</td><td>Every 7 days</td></tr>
+    <tr><td>MaybeReal Pro Yearly</td><td>3,000 per month, in 12 successive monthly allocations</td><td>Every month for 12 months</td><td>Every 12 months</td></tr>
+    <tr><td>MaybeReal Pro Plus Yearly</td><td>7,000 per month, in 12 successive monthly allocations</td><td>Every month for 12 months</td><td>Every 12 months</td></tr>
+  </tbody>
+</table>
+
+<p>We may also run promotional, limited-time or regional offers, including discounted plans and
+discounted credit packs, under names not listed above. These Terms apply to them in full, including
+sections 10 and 11.</p>
+
+<p>On the yearly plans, the price covers twelve monthly credit allocations. Credits are made
+available one month at a time and are not all released at the start of the year.</p>
+
+<h3>9.2 How subscription credits work</h3>
+
+<ul>
+  <li>Subscription credits are granted for the current allocation period only: the week on weekly
+      plans, the month on yearly plans.</li>
+  <li>At each new allocation, your subscription credit balance is reset to the plan amount.
+      Subscription credits are not cumulative and do not carry over, however many are left.</li>
+  <li>Unused subscription credits are forfeited at each allocation.</li>
+  <li>Subscription credits cannot be transferred, sold or exchanged for money.</li>
+  <li>This non-carry-over rule applies to subscription credits only. Credits from credit packs and
+      in-app rewards are separate: they do not expire and are not reset (section 9.6).</li>
+  <li>Where a request fails for a technical reason on our side, the credits consumed are restored.</li>
+</ul>
+
+<h3>9.3 Billing</h3>
+
+<p>Purchases are processed by the store you downloaded the App from, acting as merchant of record.</p>
+
+<p><strong>Apple App Store.</strong> Payment is charged to your Apple Account at confirmation of
+purchase. Your account is charged for renewal within 24 hours before the end of the current period.</p>
+
+<p><strong>Google Play.</strong> Payment is charged to the payment method on your Google Account at
+confirmation of purchase. Your account is charged for renewal at the start of each new period.</p>
+
+<p>We never receive or store your card or payment details. Subscriptions renew automatically at the
+then-current price until cancelled.</p>
+
+<h3>9.4 Cancelling</h3>
+
+<p>You may cancel at any time, without giving a reason. Cancellation stops future renewals. It does
+not, by itself, refund the current period: see section 10 and section 11.</p>
+
+<ul>
+  <li><strong>iPhone or iPad:</strong> Settings, then your name, then Subscriptions, then MaybeReal, then Cancel Subscription.</li>
+  <li><strong>Android:</strong> Google Play Store, then your profile picture, then Payments and subscriptions, then Subscriptions, then MaybeReal, then Cancel subscription.</li>
+  <li><strong>Any device, via the web:</strong> <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a> for Google Play purchases.</li>
+</ul>
+
+<p>To take effect before the next renewal, cancellation must be made at least 24 hours before the end
+of the current period. Deleting the App does not cancel a subscription. You keep access to paid
+features until the end of the period already paid for.</p>
+
+<p>The App also provides a direct link to the relevant cancellation screen in its settings.</p>
+
+<h3>9.5 Free trial</h3>
+
+<p>MaybeReal Pro includes a 3-day free trial with 300 credits for new subscribers.</p>
+
+<ul>
+  <li>The trial converts automatically into a paid subscription at the end of the 3 days unless you
+      cancel at least 24 hours before it ends.</li>
+  <li>Any unused part of a trial is forfeited if you purchase a subscription before it ends.</li>
+  <li>One trial per Apple Account or Google Account, as applicable.</li>
+</ul>
+
+<h3>9.6 Credit packs</h3>
+
+<p>The App offers one-time credit packs in several sizes. The number of credits in each pack, and
+its price, are shown in the App before you confirm the purchase, and those are the figures that apply
+to your purchase. Pack credits are delivered immediately on purchase, do not expire, are not reset at
+renewal, and cannot be transferred. Section 10 explains how the right of withdrawal applies to them.</p>
+
+<h3>9.7 Price changes</h3>
+
+<p>We may change the price of a plan. A change never applies to a period already paid for: it can
+only affect a future renewal.</p>
+
+<p>Price increases for existing subscribers are handled by the store, under its own rules. Apple and
+Google notify affected subscribers in advance, and above certain thresholds, or where local law
+requires it, the increase applies only if the subscriber accepts it. If a subscriber does not accept
+it, the subscription simply does not renew at the higher price. You can also cancel at any time, as
+described in section 9.4.</p>
+
+<h3>9.8 Credit cost of features</h3>
+
+<p>Features consume different numbers of credits, and more demanding features cost more. The credit
+cost of a feature is shown in the App before you run it, and that displayed cost is the one that
+applies to that use.</p>
+
+<p>These costs are not fixed for the life of your subscription. They follow the cost and the
+capability of the underlying AI models, which change over time. What your plan entitles you to is the
+credit allocation described in section 9.1, not a fixed number of generations, images or videos.</p>
+
+<h2>10. Right of withdrawal</h2>
+
+<div class="flag">
+  <p>This section applies if you are a consumer resident in the European Union, the European Economic
+  Area or the United Kingdom. It sits alongside the store refund routes in section 11, and does not
+  replace them.</p>
+</div>
+
+<h3>10.1 The 14-day right</h3>
+
+<p>You have 14 days from the conclusion of the contract to withdraw from a subscription or a credit
+pack, without giving a reason and without penalty, except as set out below.</p>
+
+<h3>10.2 Immediate access, and what you confirm when you buy</h3>
+
+<p>Subscriptions and credit packs give you access immediately, before the 14-day period ends. Just
+above the purchase button, the App tells you that by continuing you:</p>
+
+<ul>
+  <li>expressly ask us to start supplying immediately, without waiting for the 14 days to run; and</li>
+  <li>accept that if you then withdraw, an amount proportionate to what has already been supplied to
+      you remains due.</li>
+</ul>
+
+<p>Confirming the purchase after that notice is how you make that request and give that
+acknowledgment. We record it and will provide you with a copy on request.</p>
+
+<h3>10.3 What withdrawal gives you back</h3>
+
+<p><strong>Subscriptions.</strong> We refund the price paid, less the allocation periods already made
+available to you: one weekly period for each weekly period opened, one twelfth for each monthly allocation opened
+on a yearly plan. Credits you consumed inside an allocation are part of that allocation and are not
+deducted a second time.</p>
+
+<p><strong>Credit packs.</strong> We refund the price paid, less the value of the credits you have
+already consumed, calculated at the pack's unit price.</p>
+
+<p>If the notice described in section 10.2 was not shown to you when you bought, we refund the full
+price, with no deduction.</p>
+
+<p>Refunds are made using the same payment method, through the store that processed the purchase, and
+no later than 14 days after we are informed of your decision.</p>
+
+<h3>10.4 How to withdraw</h3>
+
+<p>Tell us before the 14 days expire, by any unambiguous statement, at
+<a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a>. You may use the form below, but
+you do not have to. Include the store used, the order number and the purchase date so we can find the
+transaction.</p>
+
+<div class="form">
+  <p><strong>Model withdrawal form</strong></p>
+  <p>To Cerebri Virtual Corporation, 60 rue François 1er, 75008 Paris, France, maybereal.app@gmail.com:</p>
+  <p>I hereby give notice that I withdraw from my contract for the supply of the following digital
+  service / digital content: ____________________<br>
+  Ordered on: ____________________<br>
+  Order number: ____________________<br>
+  Consumer name: ____________________<br>
+  Consumer address: ____________________<br>
+  Signature (paper only): ____________________<br>
+  Date: ____________________</p>
+</div>
+
+<h2>11. Refunds outside the right of withdrawal</h2>
+
+<h3>11.1 Google Play</h3>
+
+<p>Within 48 hours of purchase you can request a refund directly from Google through
+<a href="https://play.google.com/store/account">play.google.com/store/account</a>, under Payments and
+subscriptions, then Budget and order history, then Report a problem on the relevant order.</p>
+
+<p>After 48 hours, Google directs you to us, and we can process the refund ourselves. Write to
+<a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a> with your order number and the
+reason. We answer within 5 working days.</p>
+
+<h3>11.2 Apple App Store</h3>
+
+<p>Apple is the merchant of record and we have no technical ability to issue a refund for an App
+Store purchase. Requests go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+Apple decides. If Apple declines and you believe you have a statutory right under section 10 or
+section 12, contact us and we will deal with it directly.</p>
+
+<h3>11.3 Our own policy</h3>
+
+<p>We refund in full, on request, where you were charged after cancelling, or charged twice for the
+same period.</p>
+
+<p>Outside your statutory rights, we do not refund subscription periods already started or credits
+already consumed. Nothing in this section limits the rights described in sections 10 and 12.</p>
+
+<h2>12. Legal guarantee of conformity</h2>
+
+<p>We are liable for any lack of conformity of the digital content and digital services under the
+applicable consumer law, including, for consumers in France, the <em>garantie légale de conformité</em>
+provided by the French Consumer Code. That guarantee is free of charge and independent of any
+commercial guarantee. If the App does not conform, you may require it to be brought into conformity
+and, in the cases provided by law, obtain a price reduction or terminate the contract with a refund.
+Consumers resident elsewhere in the EEA or the UK have equivalent rights under their own law.</p>
+
+<h2>13. Availability</h2>
+
+<p>The App is provided on an "as is" and "as available" basis. We do not guarantee that it will be
+uninterrupted, error-free, or that any particular output will meet your expectations. We exclude
+implied warranties to the fullest extent the law allows, but nothing here removes the guarantee in
+section 12 or any other right you have as a consumer that cannot be waived.</p>
+
+<h2>14. Liability</h2>
+
+<p>To the maximum extent permitted by law, we are not liable for indirect or consequential loss, loss
+of profit, loss of revenue, or loss of data, arising from your use of the App.</p>
+
+<p>Nothing in these Terms excludes or limits our liability for death or personal injury caused by our
+negligence, for fraud or fraudulent misrepresentation, for gross negligence or wilful misconduct, or
+for any liability that cannot lawfully be excluded or limited. If you are a consumer, we are liable
+for foreseeable loss caused by our failure to meet these Terms, and the exclusions above apply only
+so far as your national consumer law permits.</p>
+
+<p>You are responsible for how you use the outputs you generate, including any consequence of
+publishing them.</p>
+
+<h2>15. Personal data</h2>
+
+<p>How we collect and process personal data is described in our
+<a href="https://maybereal-app.github.io/legal/privacy.html">Privacy Policy</a>. Where you upload Content depicting other people,
+section 5.3 applies.</p>
+
+<h2>16. Suspension and termination</h2>
+
+<p>You may stop using the App and delete your account at any time. Deleting your account does not
+cancel a subscription: cancel it through the store, as described in section 9.4.</p>
+
+<p>We may suspend or terminate your access where you seriously breach these Terms, or where your use
+may cause harm to us, to other users or to third parties. Except where the breach is serious or
+unlawful, we will give you notice and a chance to put it right first.</p>
+
+<p>If we terminate your access for a breach, unused subscription credits and unused pack credits are
+forfeited, and no refund is due for the remainder of the period. If we terminate your access without
+you having breached these Terms, we refund the unused part of the period on a pro rata basis. You can
+contest a termination by writing to us, and section 18 remains available to you.</p>
+
+<h2>17. Changes to these Terms</h2>
+
+<p>We may update these Terms. Where a change is material, or reduces what a paid plan offers, we will
+notify you at least 30 days in advance, in the App or by email. The change applies to you from the
+start of your next billing period. If you do not accept it, you may cancel before it takes effect,
+and where the change materially reduces a plan you have already paid for, you may terminate and
+receive a pro rata refund for the unused part.</p>
+
+<h2>18. Governing law, complaints and disputes</h2>
+
+<p>These Terms are governed by French law.</p>
+
+<p>If you are a consumer resident in the European Union, the EEA or the United Kingdom, this choice
+does not deprive you of the protection of the mandatory rules of your country of residence, and you
+may bring proceedings in the courts of that country.</p>
+
+<p><strong>Complaints.</strong> Write to us first at
+<a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a>. We aim to answer within
+5 working days.</p>
+
+<p><strong>Cross-border disputes.</strong> Consumers resident in the EU can also contact the European
+Consumer Centre in their country.</p>
+
+<h2>19. Miscellaneous</h2>
+
+<p>If any provision of these Terms is held unenforceable, the rest remains in force. Our failure to
+enforce a provision is not a waiver of it. These Terms, together with the Privacy Policy, form the
+whole agreement between us regarding the App.</p>
+
+<p>These Terms are drafted in English. Where we provide a translation and a discrepancy arises, the
+English version prevails, except where the law applicable to you as a consumer provides otherwise.</p>
+
+<h2>20. Contact</h2>
+
+<p>Cerebri Virtual Corporation, 60 rue François 1er, 75008 Paris, France<br>
+<a href="mailto:maybereal.app@gmail.com">maybereal.app@gmail.com</a></p>
+
+<footer>
+  <p>MaybeReal is published by Cerebri Virtual Corporation. Version 2.0, 14 September 2026.</p>
+</footer>
+
+</main>
 </body>
 </html>
