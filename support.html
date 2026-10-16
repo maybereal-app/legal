@@ -5,204 +5,392 @@
   <title>MaybeReal – Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    :root {
+      --bg: #000;
+      --text: #d4d4d8;
+      --muted: #a1a1aa;
+      --dim: #71717a;
+      --faint: #52525b;
+      --white: #fff;
+      --accent: #6366f1;
+      --link: #818cf8;
+      --link-hover: #a5b4fc;
+      --line: #1f1f23;
+      --border: #27272a;
+      --panel: #09090b;
+      --term: #0b0b0d;
+      --warn: #f87171;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { color-scheme: dark; }
+
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #050814;
-      color: #f5f5f7;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
     }
-    .wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px 48px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
-    }
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    p, li {
-      font-size: 0.97rem;
-    }
+
     a {
-      color: #4ea5ff;
-      text-decoration: none;
+      color: var(--link);
+      overflow-wrap: anywhere;
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { color: var(--link-hover); }
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
     }
-    .card {
-      background: #0c1022;
+
+    .w {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 13px;
+    }
+    .top b { color: var(--white); font-weight: 700; }
+    .dot { color: var(--accent); }
+    .top nav { white-space: nowrap; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      padding: 72px 0 56px;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: var(--white);
+      margin: 0 0 14px;
+      letter-spacing: -2px;
+      line-height: 1.02;
+    }
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+      text-shadow: 0 0 40px rgba(99, 102, 241, 0.45);
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .term {
+      background: var(--term);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 14px;
+    }
+    .term .bar {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--dim);
+    }
+    .term .bar i {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #3f3f46;
+      margin-right: 6px;
+    }
+    .term .body { padding: 20px; }
+    .term .body div { margin: 6px 0; }
+    .k { color: var(--dim); }
+
+    .sec {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      padding: 48px 0;
+      border-top: 1px solid var(--line);
+    }
+    .sec h2 {
+      color: var(--white);
+      font-size: 24px;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+    .sec .lbl {
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      color: var(--accent);
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .sec p { margin: 0 0 1rem; }
+    .sec p:last-child { margin-bottom: 0; }
+
+    details {
+      border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 16px 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+      padding: 18px 22px;
+      margin-bottom: 12px;
+      background: var(--panel);
     }
-    .contact-box {
-      background: #11152a;
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin-top: 8px;
+    details:last-child { margin-bottom: 0; }
+    details[open] {
+      border-color: #3f3f46;
+      box-shadow:
+        0 0 0 1px rgba(99, 102, 241, 0.35),
+        0 10px 30px rgba(99, 102, 241, 0.12);
     }
-    ul {
-      padding-left: 18px;
+
+    summary {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.35;
+      list-style: none;
     }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { color: #c7d2fe; }
+    details[open] summary { margin-bottom: 12px; }
+    .q-num {
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+    .q-text { flex: 1; min-width: 0; }
+    summary::after {
+      content: "+";
+      color: var(--accent);
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    details[open] summary::after { content: "−"; }
+
     .small {
-      font-size: 0.85rem;
-      opacity: 0.75;
+      font-size: 13px;
+      color: var(--dim);
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin: 0 0 1rem;
+    }
+    ul:last-child, ol:last-child { margin-bottom: 0; }
+    li { margin-bottom: 0.45rem; }
+    li:last-child { margin-bottom: 0; }
+    li ul { margin-top: 0.45rem; margin-bottom: 0; }
+
+    .warn {
+      border-left: 3px solid var(--warn);
+      padding-left: 20px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 50px;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: var(--faint);
+    }
+
+    @media (max-width: 860px) {
+      .w { padding: 0 20px; }
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 0 36px;
+      }
+      h1 {
+        font-size: 40px;
+        letter-spacing: -1.2px;
+      }
+      .hero p { font-size: 17px; }
+      .sec {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 36px 0;
+      }
+      summary { font-size: 16px; }
+      details { padding: 16px 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .w { padding: 0 16px; }
+      .top { font-size: 12px; padding: 18px 0; }
+      h1 { font-size: 32px; letter-spacing: -1px; }
+      .hero { padding: 32px 0 28px; gap: 22px; }
+      .hero p { font-size: 16px; }
+      .term { font-size: 13px; }
+      .sec h2 { font-size: 22px; }
+      summary { font-size: 15px; gap: 10px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>MaybeReal – Support</h1>
-      <p>Help, contact, and account information for the MaybeReal app on iOS and Android.</p>
-    </header>
+  <div class="w">
+    <div class="top">
+      <b>maybereal<span class="dot">/</span>support</b>
+      <nav>
+        <a href="https://maybereal-app.github.io/legal/privacy.html">privacy</a>
+        ·
+        <a href="https://maybereal-app.github.io/legal/terms.html">terms</a>
+      </nav>
+    </div>
 
-    <section class="card">
-      <h2>Contact Support</h2>
-      <p>If you have any questions or issues, you can contact us by email:</p>
-      <div class="contact-box">
-        <p>
-          Email:
-          <a href="mailto:support@maybereal.app">support@maybereal.app</a>
-        </p>
-        <p class="small">
-          Please include your email address and a short description of the problem.
-        </p>
+    <div class="hero">
+      <div>
+        <h1>Need a hand?<br /><em>We're real.</em></h1>
+        <p>Help, contact, and account information for the MaybeReal app on iOS and Android.</p>
+      </div>
+      <div class="term">
+        <div class="bar"><i></i><i></i><i></i> contact-support</div>
+        <div class="body">
+          <div><span class="k">$</span> mail <a href="mailto:support@maybereal.app">support@maybereal.app</a></div>
+          <div class="k"># If you have any questions or issues, contact us by email.</div>
+          <div class="k"># Please include your email address and a short</div>
+          <div class="k"># description of the problem.</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="sec">
+      <div>
+        <div class="lbl">01 / FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div>
+        <details>
+          <summary><span class="q-num">01</span><span class="q-text">I have an issue with my subscription or a payment</span></summary>
+          <p>All purchases and subscriptions for MaybeReal are managed by the store where you installed the app:</p>
+          <ul>
+            <li>
+              <strong>On iOS (Apple devices)</strong> – subscriptions are managed by Apple.
+              Check your subscription in <strong>Settings &gt; [your name] &gt; Subscriptions</strong> or visit:
+              <a href="https://support.apple.com/billing" target="_blank" rel="noopener noreferrer">Apple Billing &amp; Subscriptions Support</a>.
+            </li>
+            <li>
+              <strong>On Android</strong> – subscriptions are managed by Google Play.
+              Open the <strong>Google Play Store &gt; profile icon &gt; Payments &amp; subscriptions</strong> to manage or review your subscription, or visit:
+              <a href="https://support.google.com/googleplay/answer/2476088" target="_blank" rel="noopener noreferrer">Google Play Subscriptions Help</a>.
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary><span class="q-num">02</span><span class="q-text">I did not receive my credits after a purchase</span></summary>
+          <p>First, make sure you are logged in with the same account you used to buy the subscription or credits. Then:</p>
+          <ul>
+            <li>Open the app and wait a few seconds on the home screen.</li>
+            <li>If the credits are still missing, try restarting the app.</li>
+            <li>
+              If the problem remains, contact us at
+              <a href="mailto:support@maybereal.app">support@maybereal.app</a>
+              with:
+              <ul>
+                <li>a screenshot of your purchase receipt from the App Store or Google Play, and</li>
+                <li>the email address used in the app.</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary><span class="q-num">03</span><span class="q-text">The app crashes or a feature does not work</span></summary>
+          <p>Please try the following steps:</p>
+          <ul>
+            <li>Close the app completely and open it again.</li>
+            <li>Check that you are using the latest version of MaybeReal from the App Store or Google Play.</li>
+            <li>Restart your device.</li>
+            <li>
+              If the issue continues, contact us with:
+              <ul>
+                <li>Your device model (iPhone / Android phone) and OS version.</li>
+                <li>The version of the app (visible in the Settings screen).</li>
+                <li>A short explanation of the steps to reproduce the problem.</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary><span class="q-num">04</span><span class="q-text">How do I cancel my subscription?</span></summary>
+          <p>You can cancel your subscription at any time from your store account:</p>
+          <ul>
+            <li>
+              <strong>On iOS</strong>:
+              Open the <strong>Settings</strong> app &gt; tap your name &gt; <strong>Subscriptions</strong> &gt; select <strong>MaybeReal</strong> &gt; <strong>Cancel Subscription</strong>.
+            </li>
+            <li>
+              <strong>On Android</strong>:
+              Open the <strong>Google Play Store</strong> &gt; tap your profile icon &gt; <strong>Payments &amp; subscriptions</strong> &gt; <strong>Subscriptions</strong> &gt; select <strong>MaybeReal</strong> &gt; <strong>Cancel subscription</strong>.
+            </li>
+          </ul>
+          <p class="small">Deleting the app from your device does not automatically cancel an active subscription.</p>
+        </details>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Frequently Asked Questions</h2>
-
-      <h3>1. I have an issue with my subscription or a payment</h3>
-      <p>
-        All purchases and subscriptions for MaybeReal are managed by the store where you installed the app:
-      </p>
-      <ul>
-        <li>
-          <strong>On iOS (Apple devices)</strong> – subscriptions are managed by Apple.
-          Check your subscription in <strong>Settings &gt; [your name] &gt; Subscriptions</strong> or visit:
-          <a href="https://support.apple.com/billing" target="_blank" rel="noopener noreferrer">
-            Apple Billing &amp; Subscriptions Support
-          </a>.
-        </li>
-        <li>
-          <strong>On Android</strong> – subscriptions are managed by Google Play.
-          Open the <strong>Google Play Store &gt; profile icon &gt; Payments &amp; subscriptions</strong> to manage or review your subscription,
-          or visit:
-          <a href="https://support.google.com/googleplay/answer/2476088" target="_blank" rel="noopener noreferrer">
-            Google Play Subscriptions Help
-          </a>.
-        </li>
-      </ul>
-
-      <h3>2. I did not receive my credits after a purchase</h3>
-      <p>
-        First, make sure you are logged in with the same account you used to buy the subscription or credits.
-        Then:
-      </p>
-      <ul>
-        <li>Open the app and wait a few seconds on the home screen.</li>
-        <li>If the credits are still missing, try restarting the app.</li>
-        <li>
-          If the problem remains, contact us at
-          <a href="mailto:support@maybereal.app">support@maybereal.app</a>
-          with:
-          <ul>
-            <li>a screenshot of your purchase receipt from the App Store or Google Play, and</li>
-            <li>the email address used in the app.</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>3. The app crashes or a feature does not work</h3>
-      <p>
-        Please try the following steps:
-      </p>
-      <ul>
-        <li>Close the app completely and open it again.</li>
-        <li>Check that you are using the latest version of MaybeReal from the App Store or Google Play.</li>
-        <li>Restart your device.</li>
-        <li>
-          If the issue continues, contact us with:
-          <ul>
-            <li>Your device model (iPhone / Android phone) and OS version.</li>
-            <li>The version of the app (visible in the Settings screen).</li>
-            <li>A short explanation of the steps to reproduce the problem.</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>4. How do I cancel my subscription?</h3>
-      <p>
-        You can cancel your subscription at any time from your store account:
-      </p>
-      <ul>
-        <li>
-          <strong>On iOS</strong>:  
-          Open the <strong>Settings</strong> app &gt; tap your name &gt; <strong>Subscriptions</strong> &gt; select <strong>MaybeReal</strong> &gt; <strong>Cancel Subscription</strong>.
-        </li>
-        <li>
-          <strong>On Android</strong>:  
-          Open the <strong>Google Play Store</strong> &gt; tap your profile icon &gt; <strong>Payments &amp; subscriptions</strong> &gt; <strong>Subscriptions</strong> &gt; select <strong>MaybeReal</strong> &gt; <strong>Cancel subscription</strong>.
-        </li>
-      </ul>
-      <p class="small">
-        Deleting the app from your device does not automatically cancel an active subscription.
-      </p>
+    <section class="sec">
+      <div>
+        <div class="lbl">02 / DATA</div>
+        <h2>Privacy &amp; Data</h2>
+      </div>
+      <div>
+        <p>For detailed information about how we handle your data, please refer to our policies:</p>
+        <ul>
+          <li>
+            Privacy Policy:
+            <a href="https://maybereal-app.github.io/legal/privacy.html" target="_blank" rel="noopener noreferrer">https://maybereal-app.github.io/legal/privacy.html</a>
+          </li>
+          <li>
+            Terms of Use:
+            <a href="https://maybereal-app.github.io/legal/terms.html" target="_blank" rel="noopener noreferrer">https://maybereal-app.github.io/legal/terms.html</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Privacy &amp; Data</h2>
-      <p>
-        For detailed information about how we handle your data, please refer to our policies:
-      </p>
-      <ul>
-        <li>
-          Privacy Policy:
-          <a href="https://maybereal-app.github.io/legal/privacy.html" target="_blank" rel="noopener noreferrer">
-            https://maybereal-app.github.io/legal/privacy.html
-          </a>
-        </li>
-        <li>
-          Terms of Use:
-          <a href="https://maybereal-app.github.io/legal/terms.html" target="_blank" rel="noopener noreferrer">
-            https://maybereal-app.github.io/legal/terms.html
-          </a>
-        </li>
-      </ul>
+    <section class="sec">
+      <div>
+        <div class="lbl">03 / ACCOUNT</div>
+        <h2>Account deletion</h2>
+      </div>
+      <div class="warn">
+        <p>
+          You can request deletion of your account and associated data directly from the app.
+          Open <strong>Settings</strong> in MaybeReal and use the <strong>Delete account</strong> button.
+        </p>
+        <p>
+          If you cannot access the app, you can also request deletion by contacting us at
+          <a href="mailto:support@maybereal.app">support@maybereal.app</a>.
+        </p>
+        <p class="small">Please send your request from the email address linked to your account so that we can identify you correctly.</p>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Account deletion</h2>
-      <p>
-        You can request deletion of your account and associated data directly from the app.
-        Open <strong>Settings</strong> in MaybeReal and use the <strong>Delete account</strong> button.
-      </p>
-      <p>
-        If you cannot access the app, you can also request deletion by contacting us at
-        <a href="mailto:support@maybereal.app">support@maybereal.app</a>.
-      </p>
-      <p class="small">
-        Please send your request from the email address linked to your account so that we can identify you correctly.
-      </p>
-    </section>
-
-    <p class="small">
-      &copy; 2025 3DATA – MaybeReal
-    </p>
+    <footer>&copy; 2025 3DATA – MaybeReal</footer>
   </div>
 </body>
 </html>
